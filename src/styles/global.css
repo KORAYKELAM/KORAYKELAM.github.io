@@ -3,6 +3,7 @@
 /* Make Tailwind's `dark:` variant respond to the `.dark` class (not OS theme) */
 @custom-variant dark (&:where(.dark, .dark *));
 
+
 /* Smooth theme transitions */
 html,
 body {
