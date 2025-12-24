@@ -1,0 +1,22 @@
+---
+import "../styles/global.css";
+
+const { title = "Koray Kelam", description = "Personal website" } = Astro.props;
+---
+
+<!doctype html>
+<html
+  lang="tr"
+  class="dark bg-white text-slate-950 dark:bg-slate-950 dark:text-slate-100"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+
+  <body class="min-h-screen selection:bg-sky-400/30 selection:text-slate-950 dark:selection:text-white">
+    <slot />
+  </body>
+</html>
