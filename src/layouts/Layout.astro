@@ -1,9 +1,10 @@
 ---
 import "../styles/global.css";
+import { SITE } from "../site";
 
 const {
-  title = "Koray Kelam",
-  description = "Personal website",
+  title = {SITE.name},
+  description = {`${SITE.name} — Portfolio.`},
   lang = "en",
 } = Astro.props;
 ---
@@ -15,13 +16,19 @@ const {
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
     <title>{title}</title>
+
+    <!-- Favicons / App icons -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Prevent theme "flash": apply saved theme before first paint -->
     <script is:inline>
       (function () {
         const root = document.documentElement;
         const key = "theme";
 
-        // Eğer light seçiliyse, ilk boyamada bile flash olmasın:
-        // önce doğru class'ı uygula
         const saved = localStorage.getItem(key);
         const theme = saved === "light" ? "light" : "dark"; // default dark
         root.classList.toggle("dark", theme === "dark");
