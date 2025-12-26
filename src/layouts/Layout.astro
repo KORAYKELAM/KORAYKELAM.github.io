@@ -3,8 +3,8 @@ import "../styles/global.css";
 import { SITE } from "../site";
 
 const {
-  title = {SITE.name},
-  description = {`${SITE.name} — Portfolio.`},
+  title = SITE.name,
+  description = `${SITE.name} — Portfolio.`,
   lang = "en",
 } = Astro.props;
 ---
