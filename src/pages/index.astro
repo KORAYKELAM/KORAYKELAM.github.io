@@ -163,13 +163,13 @@ const t = labels[lang];
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-        <!-- card 1 -->
+        <!-- card 2 -->
         <div
           class="group rounded-2xl border border-slate-200 bg-white/70 p-6 transition hover:-translate-y-1 hover:bg-white
                 dark:border-slate-800 dark:bg-slate-900/30 dark:hover:bg-slate-900/50 dark:hover:border-slate-700"
         >
           <div class="flex items-start justify-between gap-4">
-            <h3 class="text-lg font-semibold">{t.projectCards.p1.title}</h3>
+            <h3 class="text-lg font-semibold">{t.projectCards.p2.title}</h3>
             <span
               class="rounded-full border border-slate-200 px-3 py-1 text-xs text-slate-600
                      dark:border-slate-800 dark:text-slate-300"
@@ -202,19 +202,29 @@ const t = labels[lang];
           </a>
         </div>
 
-        <!-- card 2 -->
+        <!-- card 1 -->
         <div
           class="group rounded-2xl border border-slate-200 bg-white/70 p-6 transition hover:-translate-y-1 hover:bg-white
                 dark:border-slate-800 dark:bg-slate-900/30 dark:hover:bg-slate-900/50 dark:hover:border-slate-700"
         >
           <div class="flex items-start justify-between gap-4">
-            <h3 class="text-lg font-semibold">{t.projectCards.p2.title}</h3>
+            <h3 class="text-lg font-semibold">{t.projectCards.p1.title}</h3>
             <span
               class="rounded-full border border-slate-200 px-3 py-1 text-xs text-slate-600
                      dark:border-slate-800 dark:text-slate-300"
             >2024</span>
           </div>
-
+          <div class="mt-4 overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800">
+            <video
+              class="project-video w-full aspect-video bg-black"
+              src="/videos/project1.mp4"
+              poster="/posters/project1.jpg"
+              controls
+              preload="metadata"
+              muted
+              playsinline
+            ></video>
+          </div>
           <p class="mt-3 text-slate-600 dark:text-slate-400 leading-relaxed">
             {t.projectCards.p2.desc}
           </p>
@@ -356,6 +366,5 @@ const t = labels[lang];
           });
         }
       })();
-    </script>
   </main>
 </Layout>
