@@ -1,0 +1,27 @@
+<script>
+  const els = Array.from(document.querySelectorAll(".reveal"));
+
+  const revealNow = () => {
+    const vh = window.innerHeight || document.documentElement.clientHeight;
+    els.forEach((el) => {
+      const r = el.getBoundingClientRect();
+      if (r.top < vh - 80) el.classList.add("is-visible");
+    });
+  };
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("is-visible");
+          io.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  els.forEach((el) => io.observe(el));
+  revealNow();
+  window.addEventListener("load", revealNow, { once: true });
+</script>

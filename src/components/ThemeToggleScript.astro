@@ -1,0 +1,26 @@
+<script>
+  (() => {
+    const root = document.documentElement;
+    const key = "theme";
+    const btn = document.getElementById("themeToggle");
+
+    const setTheme = (t) => {
+      root.classList.toggle("dark", t === "dark");
+      localStorage.setItem(key, t);
+      if (btn) {
+        const lightLabel = btn.dataset.lightLabel || "Light";
+        const darkLabel = btn.dataset.darkLabel || "Dark";
+        btn.textContent = root.classList.contains("dark") ? lightLabel : darkLabel;
+      }
+    };
+
+    const saved = localStorage.getItem(key);
+    setTheme(saved === "light" ? "light" : "dark");
+
+    if (btn) {
+      btn.addEventListener("click", () => {
+        setTheme(root.classList.contains("dark") ? "light" : "dark");
+      });
+    }
+  })();
+</script>
