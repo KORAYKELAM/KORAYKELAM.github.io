@@ -129,7 +129,7 @@ export const labels: Record<Lang, any> = {
       },
     },
 
-    footer: (y: number) => `© ${y} Koray Kelam · Built with Astro + Tailwind`,
+    footer: (y: number) => `© ${y} Koray Kelam · Portfolio`,
   },
 
   tr: {
@@ -260,6 +260,6 @@ export const labels: Record<Lang, any> = {
       },
     },
 
-    footer: (y: number) => `© ${y} Koray Kelam · Astro + Tailwind ile`,
+    footer: (y: number) => `© ${y} Koray Kelam · Portföy`,
   },
 };
