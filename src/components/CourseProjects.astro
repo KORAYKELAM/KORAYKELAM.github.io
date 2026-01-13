@@ -45,9 +45,12 @@ const items = (t.courseProjects.items ?? []).slice().reverse();
                 src={p.videoSrc}
                 poster={p.posterSrc}
                 controls
+                controlsList="nodownload noplaybackrate noremoteplayback"
+                disablepictureinpicture
+                playsinline
                 preload="metadata"
                 muted
-                playsinline
+                oncontextmenu="return false;"
               ></video>
             </div>
           )}
