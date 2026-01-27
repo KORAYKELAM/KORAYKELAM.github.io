@@ -3,7 +3,7 @@ export type Lang = "en" | "tr";
 export const labels: Record<Lang, any> = {
   en: {
     nav: {
-      courseProjects: "Course Projects",
+      courseProjects: "Course & Research Projects",
       personalProjects: "Personal Projects",
       publications: "Publications",
     },
@@ -22,11 +22,18 @@ export const labels: Record<Lang, any> = {
     },
 
     courseProjects: {
-      title: "Course Projects",
-      subtitle: "Highlights from coursework.",
+      title: "Course & Research Projects",
+      subtitle: "Highlights from coursework and research.",
       openRepo: "Open repo",
       hint: "Tip: Scroll horizontally →",
       items: [
+        {
+          title: "MRI-Guided Soft Robotics Research",
+          year: "2023",
+          desc: "Worked on MRI-guided, magnetically actuated continuum/guidewire robotics, including kinematic modeling, design and manufacturing of an experimental setup & a 3-DOF actuation system, simulation & MRI testing, and OpenCV-based centerline tracking using dual-camera views.",
+          tags: ["Design", "Prototyping", "Simulation", "Image Processing"],
+          posterSrc: "/posters/research_project1.png",
+        },
         {
           title: "B.Sc. Capstone Project",
           year: "2024",
@@ -36,13 +43,6 @@ export const labels: Record<Lang, any> = {
           videoSrc: "/videos/course_project1.mp4",
           posterSrc: "/posters/course_project1.jpg",
           linkHref: "https://www.linkedin.com/posts/koraykelam_we-have-successfully-completed-our-mech-491-activity-7209886103053492225-Ix7A?utm_source=share&utm_medium=member_desktop&rcm=ACoAADBL9sQB_9XF4vCWbbKOPxsrMMjDlbxUocI",
-        },
-        {
-          title: "Project Title #2",
-          year: "2024",
-          desc: "Another course project.",
-          tags: ["PyTorch", "ML", "Data"],
-          linkText: "Open repo",
         },
       ],
     },
@@ -94,7 +94,7 @@ export const labels: Record<Lang, any> = {
 
   tr: {
     nav: {
-      courseProjects: "Ders Projeleri",
+      courseProjects: "Ders ve Araştırma Projeleri",
       personalProjects: "Kişisel Projeler",
       publications: "Yayınlar",
     },
@@ -112,13 +112,19 @@ export const labels: Record<Lang, any> = {
       curValue: "Logitech’te mühendislik stajı (Lozan)",
     },
 
-    // NEW: Course Projects
     courseProjects: {
-      title: "Ders Projeleri",
-      subtitle: "Ders kapsamında yaptığım projelerden seçmeler.",
+      title: "Ders ve Araştırma Projeleri",
+      subtitle: "Ders ve araştırma kapsamında yaptığım projelerden seçmeler.",
       openRepo: "Repo'yu aç",
       hint: "İpucu: Sağa kaydır →",
       items: [
+        {
+          title: "MRG Yönlendirmeli Yumuşak Robotik Araştırması",
+          year: "2023",
+          desc: "MRG yönlendirmeli ve manyetik olarak tahrik edilen bir yumuşak robotik sistem üzerinde çalışıldı; kinematik modelleme, deney düzeneği ve 3 serbestlik dereceli (3-DOF) bir tahrik sisteminin tasarım ve imalatı, simülasyon ve MRG testleri, ve çift kamera görüntülerinden OpenCV tabanlı merkez hat takibi gerçekleştirildi.",
+          tags: ["Tasarım", "Prototipleme", "Simülasyon", "Görüntü İşleme"],
+          posterSrc: "/posters/research_project1.png",
+        },
         {
           title: "Lisans Bitirme Projesi",
           year: "2024",
@@ -128,13 +134,6 @@ export const labels: Record<Lang, any> = {
           videoSrc: "/videos/course_project1.mp4",
           posterSrc: "/posters/course_project1.jpg",
           linkHref: "https://www.linkedin.com/posts/koraykelam_we-have-successfully-completed-our-mech-491-activity-7209886103053492225-Ix7A?utm_source=share&utm_medium=member_desktop&rcm=ACoAADBL9sQB_9XF4vCWbbKOPxsrMMjDlbxUocI",
-        },
-        {
-          title: "Proje Başlığı #2",
-          year: "2024",
-          desc: "Bir başka ders projesi.",
-          tags: ["PyTorch", "Makine Öğrenmesi", "Veri"],
-          linkText: "Repo'yu aç",
         },
       ],
     },
