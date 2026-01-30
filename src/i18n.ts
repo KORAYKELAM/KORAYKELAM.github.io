@@ -70,6 +70,13 @@ export const labels: Record<Lang, any> = {
           linkText: "Open course repository",
           posterSrc: "/posters/personal_project1.png",
         },
+        {
+          title: "Early-Stage Technology Startup",
+          year: "Currently developing",
+          desc: "Developing an early-stage application focused on simulation and visualization to support decision-making in apparel.",
+          tags: ["Simulation", "Software Development", "Digital Prototyping", "Entrepreneurship"],
+          posterSrc: "/posters/personal_project2.png",
+        },
       ],
     },
 
@@ -170,6 +177,13 @@ export const labels: Record<Lang, any> = {
           linkText: "Kurs reposunu aç",
           posterSrc: "/posters/personal_project1.png",
         },
+        {
+          title: "Erken Aşama Teknoloji Girişimi",
+          year: "Geliştiriliyor",
+          desc: "Giyim alanında karar verme süreçlerini desteklemek amacıyla simülasyon ve görselleştirme odaklı, erken aşamada bir uygulama geliştiriliyor.",
+          tags: ["Simülasyon", "Yazılım Geliştirme", "Dijital Prototipleme", "Girişimcilik"],
+          posterSrc: "/posters/personal_project2.png",
+        }
       ],
     },
 
